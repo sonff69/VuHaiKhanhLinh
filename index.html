@@ -873,72 +873,85 @@
             margin-bottom: 12px;
         }
 
-        /* ---------------- BÀI 5: SLIDE SIMULATOR ---------------- */
+        /* ---------------- BÀI 5: ĐÃ NÂNG CẤP SLIDE SIMULATOR ĐỘ TƯƠNG PHẢN CAO ---------------- */
         .slide-simulator {
-            background: #333;
+            background: #1e293b; /* Khung viền đen lịch lãm */
             border-radius: var(--radius-md);
-            padding: 20px;
-            color: white;
+            padding: 24px;
+            color: #0f172a;
             margin: 25px 0;
             box-shadow: var(--shadow-lg);
         }
 
         .slide-screen {
-            background: linear-gradient(135deg, #134e5e, #71b280);
-            min-height: 250px;
+            background: #ffffff; /* Nền trắng sạch tinh tế tăng khả năng hiển thị */
+            min-height: 280px;
             border-radius: var(--radius-sm);
-            padding: 30px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
+            border-left: 8px solid var(--secondary); /* Đường điểm nhấn thương hiệu */
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
         }
 
         .slide-num {
             position: absolute;
             top: 20px;
-            right: 20px;
-            background: rgba(0,0,0,0.3);
-            padding: 4px 10px;
+            right: 25px;
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 4px 12px;
             border-radius: 50px;
             font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
         }
 
         .slide-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: var(--warm-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e293b; /* Màu tối rõ nét */
+            font-weight: 700;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
         }
 
         .slide-bullets {
             list-style-type: none;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            color: #334155; /* Đậm nét, cực kì dễ nhìn */
         }
 
         .slide-bullets li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
         }
 
         .slide-bullets i {
-            color: var(--accent);
+            color: var(--leaf-green); /* Điểm nhấn dấu tích */
+            margin-top: 3px;
+            flex-shrink: 0;
         }
 
         .slide-sim-controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 15px;
+            margin-top: 20px;
+            padding: 0 5px;
         }
 
         .btn-slide-nav {
-            background: rgba(255,255,255,0.1);
-            border: none;
-            color: white;
-            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 10px 20px;
             border-radius: var(--radius-sm);
             cursor: pointer;
             font-weight: 700;
@@ -947,7 +960,8 @@
         }
 
         .btn-slide-nav:hover {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
         }
 
         /* ---------------- SECTION: TỔNG KẾT KHÓ KHĂN / THUẬN LỢI ---------------- */
@@ -1494,7 +1508,7 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Sato, Y. (2019) - 日本語の受身表現とその対訳...</td>
+                                        <td>Sato, Y. (2019) - 日本語 của 受身表現 và cấu trúc dịch tương đương...</td>
                                         <td>Bài báo khoa học</td>
                                         <td>Đăng tải trên CiNii Nhật Bản, phân tích đối chiếu ngữ nghĩa học sâu sắc, trích dẫn cao (45 lượt).</td>
                                         <td>Viết hoàn toàn bằng tiếng Nhật chuyên ngành khó tiếp cận với người mới.</td>
@@ -1668,21 +1682,21 @@
                         <h4>Mục tiêu & Quy trình thiết kế hỗn hợp (AI + Human)</h4>
                         <p>Thực hiện thiết kế slide kết hợp sức mạnh phân tích của Google Gemini, năng lượng tạo hình ảnh của Adobe Firefly và bố cục tự động của Canva Magic Design.</p>
                         
-                        <h4>Minh họa tương tác: Trình mô phỏng Slide thuyết trình sau khi tinh chỉnh</h4>
+                        <h4>Mô phỏng Slide thuyết trình (Bản thiết kế tương phản cao, dễ nhìn)</h4>
                         <div class="slide-simulator">
                             <div class="slide-screen" id="slideScreen">
                                 <span class="slide-num" id="slideNum">Slide 1 / 4</span>
                                 <h4 class="slide-title" id="slideTitle">1. Tổng quan thị trường việc làm xanh</h4>
                                 <ul class="slide-bullets" id="slideBullets">
-                                    <li><i data-lucide="check-circle-2"></i> Xu hướng phát triển bền vững trở thành ưu tiên toàn cầu.</li>
-                                    <li><i data-lucide="check-circle-2"></i> Dự kiến tăng trưởng mạnh mẽ nhu cầu lao động xanh năm 2025-2026.</li>
-                                    <li><i data-lucide="check-circle-2"></i> Nhu cầu cấp thiết về đào tạo kỹ năng số xanh cho nhân sự trẻ.</li>
+                                    <li><i data-lucide="check-circle-2"></i> Xu hướng phát triển bền vững trở thành ưu tiên chiến lược toàn cầu.</li>
+                                    <li><i data-lucide="check-circle-2"></i> Dự báo nhu cầu nhân sự am hiểu thực hành xanh tăng mạnh giai đoạn 2025-2026.</li>
+                                    <li><i data-lucide="check-circle-2"></i> Yêu cầu bức thiết về kỹ năng số xanh đối với thế hệ lao động trẻ tuổi.</li>
                                 </ul>
                             </div>
                             <div class="slide-sim-controls">
-                                <button class="btn-slide-nav" onclick="prevSlide()">Slide trước</button>
-                                <span style="font-size: 0.85rem; color: #aaa;">Sử dụng nguyên lý "Less is More" (Cắt bớt 50% chữ thừa của AI)</span>
-                                <button class="btn-slide-nav" onclick="nextSlide()">Slide kế tiếp</button>
+                                <button class="btn-slide-nav" onclick="prevSlide()"><i data-lucide="chevron-left" style="display:inline-block; vertical-align:middle;"></i> Slide trước</button>
+                                <span style="font-size: 0.85rem; color: #94a3b8; font-weight:600;">Sử dụng nguyên lý "Less is More" (Tối ưu tương phản 100%)</span>
+                                <button class="btn-slide-nav" onclick="nextSlide()">Slide kế tiếp <i data-lucide="chevron-right" style="display:inline-block; vertical-align:middle;"></i></button>
                             </div>
                         </div>
 
@@ -1925,7 +1939,7 @@
             {
                 title: "1. Tổng quan thị trường việc làm xanh",
                 bullets: [
-                    "Xu hướng phát triển bền vững trở thành ưu tiên chiến lược toàn cầu.",
+                    "Xuuyên suốt xu hướng phát triển bền vững trở thành ưu tiên chiến lược toàn cầu.",
                     "Dự báo nhu cầu nhân sự am hiểu thực hành xanh tăng mạnh giai đoạn 2025-2026.",
                     "Yêu cầu bức thiết về kỹ năng số xanh đối với thế hệ lao động trẻ tuổi."
                 ]
